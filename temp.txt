@@ -23,3 +23,5 @@
 
 6. 인증키
 FZ9ETTcU6BfwsBtQzxMy%2BpDySKoGs8TSeTUn0mJYWVU71VM6%2BKsLVDMDuunnFhcFfjngrpqB74HlAxLtj1kv%2Bg%3D%3D
+
+-google api key : AIzaSyAZz9q-KsvHDMViTJZ8pVaQNSNmk5IWeIc

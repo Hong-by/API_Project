@@ -23,23 +23,22 @@
 <body>
 
   <div class="wrap">
-    <!-- main Background Image -->
-    <img src="/API_project/img/gocamp_bg.png" alt="" class="bg">
 
     <!-- Header -->
     <?php include $_SERVER['DOCUMENT_ROOT']."/API_project/include/header.php"; ?>
 
+    <!-- Map Box -->
+    <div class="map_img" id="map">
+      <img src="img/gocamp_map.jpg" alt="">
+    </div>
+
     <!-- Search and Select Bar -->
-    <div class="contents_bar">
+    <div class="contents_bar search_position">
       <div class="center">
-        <div class="search_bar">
-          <input type="text" placeholder="검색할 키워드를 입력해 주세요.">
-          <button><img src="/API_project/img/gocamp_icon.png" alt=""></button>
-        </div>
         <div class="drop_bar">
           <div class="dropdown">
             <div class="select">
-              <span>내 주변 캠핑장 검색</span>
+              <span id="query_val">내 주변 캠핑장 검색</span>
               <i class="fa fa-chevron-down"></i>
             </div>
             <ul class="dropdown_menu">
@@ -53,6 +52,11 @@
         </div>
       </div>
     </div>
+    <!-- End of Contents_bar -->
+    <div class="bt_box">
+      <span><i class="fa fa-chevron-up"></i></span>
+      <div class="bt_sl carousel_section"></div>
+    </div>
   </div>
 
 
@@ -60,6 +64,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="/API_project/js/main.js"></script>
   <!-- <script src="/API_project/js/current_position.js"></script> -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZz9q-KsvHDMViTJZ8pVaQNSNmk5IWeIc&region=kr"></script>
 
 </body>
 
