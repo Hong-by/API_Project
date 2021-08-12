@@ -1,18 +1,15 @@
 <?php
 
-  $lat = $_GET['lat']; //세로 (latitude-위도)
-  $lon = $_GET['lon']; //가로 (longitude-경도)
+  $key_value = $_GET['key'];
 
   $ch = curl_init();
-  $url = 'http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/locationBasedList'; /*URL*/
+  $url = 'http://api.visitkorea.or.kr/openapi/service/rest/GoCamping/searchList'; /*URL*/
   $queryParams = '?' . urlencode('ServiceKey') . '=FZ9ETTcU6BfwsBtQzxMy%2BpDySKoGs8TSeTUn0mJYWVU71VM6%2BKsLVDMDuunnFhcFfjngrpqB74HlAxLtj1kv%2Bg%3D%3D'; /*Service Key*/
   $queryParams .= '&' . urlencode('pageNo') . '=' . urlencode('1'); /**/
   $queryParams .= '&' . urlencode('numOfRows') . '=' . urlencode('10'); /**/
   $queryParams .= '&' . urlencode('MobileOS') . '=' . urlencode('ETC'); /**/
   $queryParams .= '&' . urlencode('MobileApp') . '=' . urlencode('AppTest'); /**/
-  $queryParams .= '&' . urlencode('mapX') . '=' . urlencode($lon); /*경도*/
-  $queryParams .= '&' . urlencode('mapY') . '=' . urlencode($lat); /*위도*/
-  $queryParams .= '&' . urlencode('radius') . '=' . urlencode(10); /*반경 거리*/
+  $queryParams .= '&' . urlencode('keyword') . '=' . urlencode($key_value); /**/
 
   curl_setopt($ch, CURLOPT_URL, $url . $queryParams);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);

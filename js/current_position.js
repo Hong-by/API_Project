@@ -18,27 +18,27 @@ navigator.geolocation.getCurrentPosition((position) => {
       const item = result.body.items.item;
       let currentItems = "";
 
-      item.forEach(function (data) {
+      item.forEach(function (data) { //데이터들을 각각 뽑아오는 과정
         console.log(data);
         currentItems = `
-                        <div class="carousel_item">
-                          <div class="item_card">
-                            <a href="/API_project/detail_position.php?">
-                              <div class="sl_img">
-                                <img src="${data.firstImageUrl}" alt="" onerror="this.src='/API_project/img/no_image.png'">
-                              </div>
-                              <div class="sl_txt">
-                                <h2>${data.facltNm}</h2>
-                                <p>${data.addr1}</p>
-                              </div>
-                              <div class="sl_icons">
-                                <img src="img/ico_mart.png" alt="">
-                                <em>${data.sbrsCl}</em>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      `;
+          <div class="carousel_item">
+            <div class="item_card">
+              <a href="/API_project/detail_position.php?lon=${data.mapX}&lat=${data.mapY}">
+                <div class="sl_img">
+                  <img src="${data.firstImageUrl}" alt="" onerror="this.src='/API_project/img/no_image.png'">
+                </div>
+              </a>
+              <div class="sl_txt">
+                <h2>${data.facltNm}</h2>
+                <p>${data.addr1}</p>
+              </div>
+              <div class="sl_icons">
+                <img src="img/ico_mart.png" alt="">
+                <em>${data.sbrsCl}</em>
+              </div>
+            </div>
+          </div>
+        `;
         contentsBox.innerHTML += currentItems;
       });
 
