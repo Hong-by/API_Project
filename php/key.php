@@ -10,6 +10,7 @@
   $queryParams .= '&' . urlencode('MobileOS') . '=' . urlencode('ETC'); /**/
   $queryParams .= '&' . urlencode('MobileApp') . '=' . urlencode('AppTest'); /**/
   $queryParams .= '&' . urlencode('keyword') . '=' . urlencode($key_value); /**/
+  
 
   curl_setopt($ch, CURLOPT_URL, $url . $queryParams);
   curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);

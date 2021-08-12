@@ -12,12 +12,13 @@ $.ajax({
   success: function (result) {
     //console.log(result);
     const item = result.body.items.item;
-    console.log(Array.isArray(item));
+    // console.log(Array.isArray(item));
 
     let currentItems = "";
     var map;
 
-    if (Array.isArray(item)) {
+    //검색 키워드에 맞춰 구글 맵에 표시
+    if (Array.isArray(item)) { //검색 결과가 여러개 일 때.
       item.forEach(carousel_item);
 
       //google Map Logics here
@@ -28,7 +29,7 @@ $.ajax({
         }
       }
       initMap();
-    } else {
+    } else { //검색 결과가 한개 일 때
       carousel_item(item);
 
       //google Map Logics here

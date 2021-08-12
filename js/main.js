@@ -4,6 +4,11 @@ $(function () {
   $(".btn").click(function () {
     $(this).toggleClass('active');
     $(this).toggleClass('not-active');
+    if ($(this).hasClass("active")) {
+      $(".menu").slideDown(200);
+    } else {
+      $(".menu").slideUp(200);
+    }
   });
 
   // search select button active
@@ -28,6 +33,7 @@ $(function () {
     if ($(this).hasClass("on")) {
       $(".bt_box i").attr("class", "fa fa-chevron-down");
       $(".bt_box").stop().animate({ 'bottom': 0 }, 300);
+
     } else {
       $(".bt_box i").attr("class", "fa fa-chevron-up");
       $(".bt_box").stop().animate({ "bottom": -(h_bt_box - h_bt_sl) }, 300);
