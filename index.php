@@ -55,7 +55,16 @@
     </div>
   </div>
 
-  <div id="landing" class="start">
+
+  <?php
+
+  $cookie_name = "start";
+  $cookie_value = "started";
+  setcookie($cookie_name, $cookie_value, time() + 600, "/");
+
+  ?>
+
+  <div id="landing" class="<?php if(!isset($_COOKIE[$cookie_name])){echo "start";}else{echo "started";}; ?>">
     <div class="landing_logo">
       <img src="/API_project/img/gocamp_logo.png" alt="">
     </div>
@@ -74,6 +83,17 @@
     const key_val = document.querySelector('.search_bar input').value;
     location.href = `/API_project/key_position.php?key_val=${key_val}`;
   });
+
+
+  // js로 쿠키 생성하는 코드
+  // function setCookie(value, min) {
+  //   const exdate = new Date(); //현재 날짜 객체 호출
+  //   exdate.setMinutes(exdate.getMinutes() + 3) // 현재 날짜 정보에서 분 정보만 추출
+  //   const cookie_value = escape(value) + ((min == null) ? '' : '; expires=' + exdate.toUTCString())
+  //   document.cookie = cookie_value;
+  // }
+
+  //   setCookie('start', 1);
   </script>
 
 </body>
