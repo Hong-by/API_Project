@@ -44,3 +44,9 @@
 - 오픈 데이터 수신 오류
 - 지도 표시 멀티 타켓 마커 적용
 - 상세 데이터 접근키 제공 안함
+
+## Browser Support
+
+![Chrome](https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png)</br>Chrome | ![Firefox](https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png)</br>Firefox | ![IE](https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png)</br>IE/edge | ![Opera](https://raw.githubusercontent.com/alrra/browser-logos/master/src/opera/opera_48x48.png)</br>opera | ![Safari](https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png)</br>safari
+--- | --- | --- | --- | --- |
+Latest ✔ | Latest ✔ | <span style="color:red">No Support</span></br>/ 10+ ✔ | Latest ✔ | 6.1+ ✔ |
